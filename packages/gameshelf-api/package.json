@@ -1,0 +1,22 @@
+{
+  "name": "gameshelf-api",
+  "version": "0.1.0",
+  "description": "A mock API for a game library manager",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js",
+    "start": "node src/index.js"
+  },
+  "author": "Rhys Powell <rhys@rpowell.me>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "sharp": "^0.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0"
+  }
+}

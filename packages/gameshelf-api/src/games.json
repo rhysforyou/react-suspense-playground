@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Super Mario Odyssey",
+    "developer": "Nintendo",
+    "platform": "switch",
+    "boxArt": [
+      {
+        "src": "/images/super-mario-odyssey.jpg"
+      },
+      {
+        "src": "/images/super-mario-odyssey.jpg?size=512"
+      },
+      {
+        "src": "/images/super-mario-odyssey.jpg?size=256"
+      },
+      {
+        "src": "/images/super-mario-odyssey.jpg?size=128"
+      },
+      {
+        "src": "/images/super-mario-odyssey.jpg?size=64"
+      },
+      {
+        "src": "/images/super-mario-odyssey.jpg?size=32"
+      }
+    ]
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "developer": "Rockstar",
+    "platform": "ps4",
+    "boxArt": [
+      {
+        "src": "/images/rdr2.jpg"
+      },
+      {
+        "src": "/images/rdr2.jpg?size=512"
+      },
+      {
+        "src": "/images/rdr2.jpg?size=256"
+      },
+      {
+        "src": "/images/rdr2.jpg?size=128"
+      },
+      {
+        "src": "/images/rdr2.jpg?size=64"
+      },
+      {
+        "src": "/images/rdr2.jpg?size=32"
+      }
+    ]
+  },
+  {
+    "title": "Dragon Quest XI: Echoes of an Elusive Age",
+    "developer": "Armor Project",
+    "platform": "ps4",
+    "boxArt": [
+      {
+        "src": "/images/dqxi.jpg"
+      },
+      {
+        "src": "/images/dqxi.jpg?size=512"
+      },
+      {
+        "src": "/images/dqxi.jpg?size=256"
+      },
+      {
+        "src": "/images/dqxi.jpg?size=128"
+      },
+      {
+        "src": "/images/dqxi.jpg?size=64"
+      },
+      {
+        "src": "/images/dqxi.jpg?size=32"
+      }
+    ]
+  },
+  {
+    "title": "Dragon Quest VII: Fragments of a Forgotten Past",
+    "developer": "Armor Project",
+    "platform": "3ds",
+    "boxArt": [
+      {
+        "src": "/images/dqvii.png"
+      },
+      {
+        "src": "/images/dqvii.png?size=512"
+      },
+      {
+        "src": "/images/dqvii.png?size=256"
+      },
+      {
+        "src": "/images/dqvii.png?size=128"
+      },
+      {
+        "src": "/images/dqvii.png?size=64"
+      },
+      {
+        "src": "/images/dqvii.png?size=32"
+      }
+    ]
+  },
+  {
+    "title": "Assassin's Creed Odyssey",
+    "developer": "Ubisoft",
+    "platform": "ps4",
+    "boxArt": [
+      {
+        "src": "/images/ac-odyssey.jpg"
+      },
+      {
+        "src": "/images/ac-odyssey.jpg?size=512"
+      },
+      {
+        "src": "/images/ac-odyssey.jpg?size=256"
+      },
+      {
+        "src": "/images/ac-odyssey.jpg?size=128"
+      },
+      {
+        "src": "/images/ac-odyssey.jpg?size=64"
+      },
+      {
+        "src": "/images/ac-odyssey.jpg?size=32"
+      }
+    ]
+  },
+  {
+    "title": "Forza Horizon 4",
+    "developer": "Playground Game",
+    "platform": "xbo",
+    "boxArt": [
+      {
+        "src": "/images/forza-horizon-4.png"
+      },
+      {
+        "src": "/images/forza-horizon-4.png?size=512"
+      },
+      {
+        "src": "/images/forza-horizon-4.png?size=256"
+      },
+      {
+        "src": "/images/forza-horizon-4.png?size=128"
+      },
+      {
+        "src": "/images/forza-horizon-4.png?size=64"
+      },
+      {
+        "src": "/images/forza-horizon-4.png?size=32"
+      }
+    ]
+  }
+]

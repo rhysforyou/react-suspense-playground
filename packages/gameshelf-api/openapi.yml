@@ -1,0 +1,83 @@
+openapi: "3.0.0"
+info:
+  version: 0.1.0
+  title: Gameshelf
+  license:
+    name: MIT
+servers:
+  - url: http://localhost:4000
+paths:
+  /:
+    get:
+      summary: List API endpoints
+      operationId: listEndpoints\
+      responses:
+        "200":
+          description: An object containing the various endpoints provided by this API
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Endpoints"
+  /games:
+    get:
+      summary: List all the user's games
+      operationId: listGames
+      responses:
+        "200":
+          description: An array of the user's games
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Game"
+components:
+  schemas:
+    Endpoints:
+      required:
+        - games
+      properties:
+        games:
+          type: string
+          example: "/games"
+
+    Game:
+      required:
+        - title
+      properties:
+        title:
+          type: string
+          example: Super Mario Odyssey
+        developer:
+          type: string
+          example: Nintendo
+        platform:
+          $ref: "#/components/schemas/Platform"
+    Platform:
+      type: string
+      example: switch
+      enum:
+        [
+          "nes",
+          "snes",
+          "n64",
+          "gcn",
+          "wii",
+          "wiiu",
+          "switch",
+          "gb",
+          "gbc",
+          "gba",
+          "nds",
+          "3ds",
+          "ps1",
+          "ps2",
+          "ps3",
+          "ps4",
+          "psp",
+          "vita",
+          "pc",
+          "xbox",
+          "x360",
+          "xbo",
+        ]
