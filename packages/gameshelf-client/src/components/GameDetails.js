@@ -32,7 +32,7 @@ export default class GameDetails extends React.Component {
     return (
       <div className={styles.container}>
         <header className={styles.header}>
-          <dib className={styles.boxArtWrapper}>
+          <div className={styles.boxArtWrapper}>
             <Img
               {...this.state.game.boxArt[0]}
               className={styles.boxArt}
@@ -43,7 +43,7 @@ export default class GameDetails extends React.Component {
                 />
               }
             />
-          </dib>
+          </div>
           <div className={styles.details}>
             <h2 className={styles.title}>{this.state.game.title}</h2>
             <span className={styles.developer}>
