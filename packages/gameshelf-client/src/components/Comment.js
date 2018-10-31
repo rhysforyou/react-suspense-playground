@@ -1,11 +1,11 @@
-import React from "react";
-import { unstable_createResource } from "react-cache";
-import Spinner from "./Spinner";
-import { fetchComment } from "../lib/api";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { unstable_createResource as createResource } from 'react-cache';
+import { fetchComment } from '../lib/api';
 
-import styles from "./Comment.css";
+import styles from './Comment.css';
 
-const Comments = unstable_createResource(commentId => fetchComment(commentId));
+const Comments = createResource(commentId => fetchComment(commentId));
 
 export default function Comment({ commentId }) {
   const comment = Comments.read(commentId);
@@ -16,3 +16,7 @@ export default function Comment({ commentId }) {
     </div>
   );
 }
+
+Comment.propTypes = {
+  commentId: PropTypes.string.isRequired
+};

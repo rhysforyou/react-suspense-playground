@@ -3,5 +3,8 @@
   "private": true,
   "devDependencies": {
     "lerna": "^2.6.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2"
   }
 }

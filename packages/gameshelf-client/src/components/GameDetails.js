@@ -1,13 +1,12 @@
-import React from "react";
-import { unstable_createResource } from "react-cache";
-import Img from "./Img";
-import Spinner from "./Spinner";
-import Comment from "./Comment";
-import { fetchGameDetails } from "../lib/api";
+import React from 'react';
+import { unstable_createResource as createResource } from 'react-cache';
+import Img from './Img';
+import Comment from './Comment';
+import { fetchGameDetails } from '../lib/api';
 
-import styles from "./GameDetails.css";
+import styles from './GameDetails.css';
 
-const Games = unstable_createResource(gameId => fetchGameDetails(gameId));
+const Games = createResource(gameId => fetchGameDetails(gameId));
 
 export default function GameDetails({ gameId }) {
   const game = Games.read(gameId);
@@ -17,10 +16,17 @@ export default function GameDetails({ gameId }) {
         <div className={styles.boxArtWrapper}>
           <React.Suspense
             fallback={
-              <img className={styles.boxArtPlaceholder} {...game.boxArt[5]} />
-            }
-          >
-            <Img {...game.boxArt[0]} className={styles.boxArt} />
+              <img
+                className={styles.boxArtPlaceholder}
+                {...game.boxArt[5]}
+                alt={game.title}
+              />
+            }>
+            <Img
+              {...game.boxArt[0]}
+              className={styles.boxArt}
+              alt={game.title}
+            />
           </React.Suspense>
         </div>
         <div className={styles.details}>

@@ -1,20 +1,20 @@
-import React from "react";
-import styles from "./RouterErrorBoundary.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './RouterErrorBoundary.css';
 
 export default class RouterErrorBoundary extends React.Component {
+  static propTypes = {
+    children: PropTypes.children
+  };
+
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(_error) {
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
-  }
-
-  componentDidCatch(error, info) {
-    // You can also log the error to an error reporting service
-    // logErrorToMyService(error, info);
   }
 
   handleGoBack = e => {
@@ -32,17 +32,16 @@ export default class RouterErrorBoundary extends React.Component {
       // You can render any custom fallback UI
       return (
         <div className={styles.container}>
-          <h1>🍐 Something's Gone Pear Shaped</h1>
+          <h1>
+            <span role="img" aria-label="pear">
+              🍐
+            </span>{' '}
+            Something&apos;s Gone Pear Shaped
+          </h1>
           <p>
-            Something went wrong loading this page, you can{" "}
-            <a href="#" onClick={this.handleGoBack}>
-              go back
-            </a>{" "}
-            or try{" "}
-            <a href="#" onClick={this.handleRefresh}>
-              refreshing the page
-            </a>
-            .
+            Something went wrong loading this page, you can{' '}
+            <button onClick={this.handleGoBack}>go back</button> or try{' '}
+            <button onClick={this.handleRefresh}>refreshing the page</button>.
           </p>
         </div>
       );

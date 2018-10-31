@@ -1,5 +1,6 @@
-import React from "react";
-import { unstable_createResource } from "react-cache";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { unstable_createResource } from 'react-cache';
 
 const Images = unstable_createResource(
   src =>
@@ -10,6 +11,11 @@ const Images = unstable_createResource(
     })
 );
 
-export default function Img({ src, ...props }) {
-  return <img src={Images.read(src)} {...props} />;
+export default function Img({ src, alt, ...props }) {
+  return <img src={Images.read(src)} alt={alt} {...props} />;
 }
+
+Img.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+};
