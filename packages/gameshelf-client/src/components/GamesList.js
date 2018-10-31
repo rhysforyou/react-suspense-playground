@@ -12,6 +12,7 @@ export default function GamesList() {
   const games = Games.read();
   return (
     <div className={styles.container}>
+      <h1>Your Games</h1>
       {games.map(game => (
         <Link className={styles.row} to={`/games/${game.id}`} key={game.id}>
           <div className={styles.boxArtWrapper}>
