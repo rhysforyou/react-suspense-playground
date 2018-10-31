@@ -1,0 +1,83 @@
+.container {
+  max-width: 48rem;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.row {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s ease-out;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+}
+.row:hover {
+  background: #e8f7f7;
+}
+
+.row:focus {
+  outline: none;
+  border: 2px solid darkturquoise;
+  padding: calc(1rem - 2px);
+}
+
+.row:active {
+  background-color: paleturquoise;
+  transition: none;
+}
+
+.box-art-wrapper {
+  flex-shrink: 0;
+  width: 6rem;
+  margin-right: 1rem;
+}
+
+.box-art {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.4),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.box-art-placeholder {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.4),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  filter: blur(5px);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.developer {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.platform {
+  background: paleturquoise;
+  color: #006c6d;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}

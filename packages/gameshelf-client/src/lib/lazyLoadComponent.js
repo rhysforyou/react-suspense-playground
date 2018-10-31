@@ -12,7 +12,7 @@ export default function lazyLoadComponent(moduleLoader) {
       };
     }
 
-    componentWillMount() {
+    componentDidMount() {
       moduleLoader().then(component => {
         this.setState({ component, loading: false });
       });

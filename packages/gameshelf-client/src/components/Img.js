@@ -9,7 +9,7 @@ export default class Img extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const image = new Image();
     image.src = this.props.src;
     image.onload = () => {

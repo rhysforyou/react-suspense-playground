@@ -1,22 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import Spinner from "./Spinner";
 import { fetchComment } from "../lib/api";
 
-const Container = styled.div`
-  padding: 1rem;
-  background: #eaf9f9;
-  margin-bottom: 1rem;
-  border-radius: 0.25rem;
-`;
-
-const Author = styled.h3`
-  margin: 0;
-`;
-
-const Text = styled.p`
-  margin-bottom: 0;
-`;
+import styles from "./Comment.css";
 
 export default class Comment extends React.Component {
   constructor(props) {
@@ -28,7 +14,7 @@ export default class Comment extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetchComment(this.props.commentId).then(comment => {
       this.setState({
         comment,
@@ -43,10 +29,10 @@ export default class Comment extends React.Component {
     }
 
     return (
-      <Container>
-        <Author>{this.state.comment.author}</Author>
-        <Text>{this.state.comment.text}</Text>
-      </Container>
+      <div className={styles.container}>
+        <h3 className={styles.author}>{this.state.comment.author}</h3>
+        <p className={styles.text}>{this.state.comment.text}</p>
+      </div>
     );
   }
 }
