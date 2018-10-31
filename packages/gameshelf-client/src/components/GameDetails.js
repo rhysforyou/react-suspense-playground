@@ -1,4 +1,5 @@
 import React from "react";
+import { unstable_createResource } from "react-cache";
 import Img from "./Img";
 import Spinner from "./Spinner";
 import Comment from "./Comment";
@@ -6,64 +7,37 @@ import { fetchGameDetails } from "../lib/api";
 
 import styles from "./GameDetails.css";
 
-export default class GameDetails extends React.Component {
-  constructor(props) {
-    super(props);
+const Games = unstable_createResource(gameId => fetchGameDetails(gameId));
 
-    this.state = {
-      game: null,
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    fetchGameDetails(this.props.gameId).then(game => {
-      this.setState({
-        game,
-        loading: false
-      });
-    });
-  }
-
-  render() {
-    if (this.state.loading) {
-      return <Spinner />;
-    }
-    return (
-      <div className={styles.container}>
-        <header className={styles.header}>
-          <div className={styles.boxArtWrapper}>
-            <Img
-              {...this.state.game.boxArt[0]}
-              className={styles.boxArt}
-              fallback={
-                <img
-                  className={styles.boxArtPlaceholder}
-                  {...this.state.game.boxArt[5]}
-                />
-              }
-            />
-          </div>
-          <div className={styles.details}>
-            <h2 className={styles.title}>{this.state.game.title}</h2>
-            <span className={styles.developer}>
-              {this.state.game.developer}
-            </span>
-            <span className={styles.platform}>
-              {this.state.game.platform.toUpperCase()}
-            </span>
-            <span className={styles.description}>
-              {this.state.game.description}
-            </span>
-          </div>
-        </header>
-        <div className={styles.comments}>
-          <h2>Comments</h2>
-          {this.state.game.comments.map(commentId => (
+export default function GameDetails({ gameId }) {
+  const game = Games.read(gameId);
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <div className={styles.boxArtWrapper}>
+          <React.Suspense
+            fallback={
+              <img className={styles.boxArtPlaceholder} {...game.boxArt[5]} />
+            }
+          >
+            <Img {...game.boxArt[0]} className={styles.boxArt} />
+          </React.Suspense>
+        </div>
+        <div className={styles.details}>
+          <h2 className={styles.title}>{game.title}</h2>
+          <span className={styles.developer}>{game.developer}</span>
+          <span className={styles.platform}>{game.platform.toUpperCase()}</span>
+          <span className={styles.description}>{game.description}</span>
+        </div>
+      </header>
+      <div className={styles.comments}>
+        <h2>Comments</h2>
+        <React.Suspense>
+          {game.comments.map(commentId => (
             <Comment key={commentId} commentId={commentId} />
           ))}
-        </div>
+        </React.Suspense>
       </div>
-    );
-  }
+    </div>
+  );
 }

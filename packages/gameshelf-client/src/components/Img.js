@@ -1,28 +1,15 @@
 import React from "react";
+import { unstable_createResource } from "react-cache";
 
-export default class Img extends React.Component {
-  constructor(props) {
-    super(props);
+const Images = unstable_createResource(
+  src =>
+    new Promise(resolve => {
+      const image = new Image();
+      image.src = src;
+      image.onload = () => resolve(src);
+    })
+);
 
-    this.state = {
-      loading: true
-    };
-  }
-
-  componentDidMount() {
-    const image = new Image();
-    image.src = this.props.src;
-    image.onload = () => {
-      this.setState({ loading: false });
-    };
-  }
-
-  render() {
-    const { fallback, ...props } = this.props;
-    if (this.state.loading) {
-      return fallback;
-    } else {
-      return <img {...props} />;
-    }
-  }
+export default function Img({ src, ...props }) {
+  return <img src={Images.read(src)} {...props} />;
 }
