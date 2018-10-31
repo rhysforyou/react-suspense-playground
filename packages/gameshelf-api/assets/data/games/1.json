@@ -1,0 +1,28 @@
+{
+  "id": 1,
+  "title": "Red Dead Redemption 2",
+  "developer": "Rockstar",
+  "platform": "ps4",
+  "description": "The game is a prequel set in 1899. At this time, outlaw gangs are disappearing and the wild west era is about to end. Players take the role of Arthur Morgan, the right-hand man of the Van der Linde gang. The gang struggles to survive as the law threatens to destroy its way of life once and for all. Characters from the previous game, including John Marston, Bill Williamson, and Dutch Van der Linde, are also present.",
+  "boxArt": [
+    {
+      "src": "http://localhost:3000/images/rdr2.jpg"
+    },
+    {
+      "src": "http://localhost:3000/images/rdr2.jpg?size=512"
+    },
+    {
+      "src": "http://localhost:3000/images/rdr2.jpg?size=256"
+    },
+    {
+      "src": "http://localhost:3000/images/rdr2.jpg?size=128"
+    },
+    {
+      "src": "http://localhost:3000/images/rdr2.jpg?size=64"
+    },
+    {
+      "src": "http://localhost:3000/images/rdr2.jpg?size=8"
+    }
+  ],
+  "comments": [3, 4]
+}

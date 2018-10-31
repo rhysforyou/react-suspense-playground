@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "title": "Dragon Quest XI: Echoes of an Elusive Age",
+  "description": "Dragon Quest XI: Echoes of an Elusive Age is the eleventh mainline entry in the storied role-playing franchise created by Square Enix and Yuji Horii's production studio, Armor Project. The title was initially released in Japan simultaneously for the PlayStation 4 and Nintendo 3DS on July 29, 2017 with plans to eventually publish a port for the Nintendo Switch. Square Enix released Dragon Quest XI in North America and Europe on September 4, 2018 for the PlayStation 4 as well as the PC via Steam. The localized version featured a number of improvements including newly added voice acting that was not present in the Japanese release, reworked menus and an extra difficulty mode among other additions.",
+  "developer": "Armor Project",
+  "platform": "ps4",
+  "boxArt": [
+    {
+      "src": "http://localhost:3000/images/dqxi.jpg"
+    },
+    {
+      "src": "http://localhost:3000/images/dqxi.jpg?size=512"
+    },
+    {
+      "src": "http://localhost:3000/images/dqxi.jpg?size=256"
+    },
+    {
+      "src": "http://localhost:3000/images/dqxi.jpg?size=128"
+    },
+    {
+      "src": "http://localhost:3000/images/dqxi.jpg?size=64"
+    },
+    {
+      "src": "http://localhost:3000/images/dqxi.jpg?size=8"
+    }
+  ],
+  "comments": [2]
+}
