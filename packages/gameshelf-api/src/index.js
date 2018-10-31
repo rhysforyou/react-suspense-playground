@@ -25,6 +25,15 @@ app.get("/images/:filename", async (req, res) => {
   const format = filename.split(".").slice(-1)[0];
   const size = req.query.size != null ? parseInt(req.query.size, 10) : null;
 
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send();
+  } else if (isNaN(size)) {
+    return res
+      .status(400)
+      .contentType("text")
+      .send("`size` parameter must be a number");
+  }
+
   if (size == null) {
     const data = await Promise.promisify(fs.readFile)(filePath);
     return res.contentType(format).send(data);
