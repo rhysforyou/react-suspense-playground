@@ -46,10 +46,20 @@ const Row = styled(Link)`
   align-items: center;
   text-decoration: none;
   color: inherit;
-  transition: all 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  border: 0px solid transparent;
 
   &:hover {
     background: #e8f7f7;
+  }
+
+  &:focus {
+    outline: none;
+    background: #e8f7f7;
+    border: 2px solid darkturquoise;
+    padding: calc(1rem - 2px);
   }
 
   &:active {

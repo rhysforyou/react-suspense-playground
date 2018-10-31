@@ -22,10 +22,18 @@ const NavLink = styled(Link)`
   min-height: 3rem;
   border-radius: 1.5rem;
   box-sizing: border-box;
-  transition: all 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
+  border: 0px solid transparent;
 
   &:hover {
     background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px solid white;
+    padding: calc(0.5rem - 2px) calc(1rem - 2px);
   }
 
   &:active {
