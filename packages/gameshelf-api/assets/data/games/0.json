@@ -1,0 +1,36 @@
+{
+  "id": 0,
+  "title": "Super Mario Odyssey",
+  "developer": "Nintendo",
+  "platform": "switch",
+  "boxArt": [
+    {
+      "src": "http://localhost:3000/images/super-mario-odyssey.jpg"
+    },
+    {
+      "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=512"
+    },
+    {
+      "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=256"
+    },
+    {
+      "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=128"
+    },
+    {
+      "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=64"
+    },
+    {
+      "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=32"
+    }
+  ],
+  "comments": [
+    {
+      "author": "John Videogames",
+      "text": "Wow what a great game!"
+    },
+    {
+      "author": "Henry Hatsworth",
+      "text": "I love to throw the cap man at things! Ten caps out of ten for me."
+    }
+  ]
+},

@@ -1,0 +1,158 @@
+[
+  {
+    "id": 0,
+    "title": "Super Mario Odyssey",
+    "developer": "Nintendo",
+    "platform": "switch",
+    "boxArt": [
+      {
+        "src": "http://localhost:3000/images/super-mario-odyssey.jpg"
+      },
+      {
+        "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=512"
+      },
+      {
+        "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=256"
+      },
+      {
+        "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=128"
+      },
+      {
+        "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=64"
+      },
+      {
+        "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=8"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Red Dead Redemption 2",
+    "developer": "Rockstar",
+    "platform": "ps4",
+    "boxArt": [
+      {
+        "src": "http://localhost:3000/images/rdr2.jpg"
+      },
+      {
+        "src": "http://localhost:3000/images/rdr2.jpg?size=512"
+      },
+      {
+        "src": "http://localhost:3000/images/rdr2.jpg?size=256"
+      },
+      {
+        "src": "http://localhost:3000/images/rdr2.jpg?size=128"
+      },
+      {
+        "src": "http://localhost:3000/images/rdr2.jpg?size=64"
+      },
+      {
+        "src": "http://localhost:3000/images/rdr2.jpg?size=8"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dragon Quest XI: Echoes of an Elusive Age",
+    "developer": "Armor Project",
+    "platform": "ps4",
+    "boxArt": [
+      {
+        "src": "http://localhost:3000/images/dqxi.jpg"
+      },
+      {
+        "src": "http://localhost:3000/images/dqxi.jpg?size=512"
+      },
+      {
+        "src": "http://localhost:3000/images/dqxi.jpg?size=256"
+      },
+      {
+        "src": "http://localhost:3000/images/dqxi.jpg?size=128"
+      },
+      {
+        "src": "http://localhost:3000/images/dqxi.jpg?size=64"
+      },
+      {
+        "src": "http://localhost:3000/images/dqxi.jpg?size=8"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Dragon Quest VII: Fragments of a Forgotten Past",
+    "developer": "Armor Project",
+    "platform": "3ds",
+    "boxArt": [
+      {
+        "src": "http://localhost:3000/images/dqvii.png"
+      },
+      {
+        "src": "http://localhost:3000/images/dqvii.png?size=512"
+      },
+      {
+        "src": "http://localhost:3000/images/dqvii.png?size=256"
+      },
+      {
+        "src": "http://localhost:3000/images/dqvii.png?size=128"
+      },
+      {
+        "src": "http://localhost:3000/images/dqvii.png?size=64"
+      },
+      {
+        "src": "http://localhost:3000/images/dqvii.png?size=8"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Assassin's Creed Odyssey",
+    "developer": "Ubisoft",
+    "platform": "ps4",
+    "boxArt": [
+      {
+        "src": "http://localhost:3000/images/ac-odyssey.jpg"
+      },
+      {
+        "src": "http://localhost:3000/images/ac-odyssey.jpg?size=512"
+      },
+      {
+        "src": "http://localhost:3000/images/ac-odyssey.jpg?size=256"
+      },
+      {
+        "src": "http://localhost:3000/images/ac-odyssey.jpg?size=128"
+      },
+      {
+        "src": "http://localhost:3000/images/ac-odyssey.jpg?size=64"
+      },
+      {
+        "src": "http://localhost:3000/images/ac-odyssey.jpg?size=8"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Forza Horizon 4",
+    "developer": "Playground Game",
+    "platform": "xbo",
+    "boxArt": [
+      {
+        "src": "http://localhost:3000/images/forza-horizon-4.png"
+      },
+      {
+        "src": "http://localhost:3000/images/forza-horizon-4.png?size=512"
+      },
+      {
+        "src": "http://localhost:3000/images/forza-horizon-4.png?size=256"
+      },
+      {
+        "src": "http://localhost:3000/images/forza-horizon-4.png?size=128"
+      },
+      {
+        "src": "http://localhost:3000/images/forza-horizon-4.png?size=64"
+      },
+      {
+        "src": "http://localhost:3000/images/forza-horizon-4.png?size=8"
+      }
+    ]
+  }
+]

@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const games = require("./games.json");
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
@@ -13,11 +12,37 @@ app.use(cors());
 
 app.get("/", (req, res) =>
   res.contentType("json").send({
-    games: "/games"
+    games: "/games",
+    game: "games/:id",
+    currentUser: "/user"
   })
 );
 
-app.get("/games", (req, res) => res.contentType("json").send(games));
+app.get("/games", (req, res) =>
+  res
+    .contentType("json")
+    .send(fs.readFileSync(path.resolve(__dirname, "../assets/data/games.json")))
+);
+
+app.get("/games/:id", (req, res) =>
+  res
+    .contentType("json")
+    .send(
+      fs.readFileSync(
+        path.resolve(
+          __dirname,
+          "../assets/data/games/",
+          `${req.params.id}.json`
+        )
+      )
+    )
+);
+
+app.get("/user", (req, res) =>
+  res
+    .contentType("json")
+    .send(fs.readFileSync(path.resolve(__dirname, "../assets/data/user.json")))
+);
 
 app.get("/images/:filename", async (req, res) => {
   const filename = req.params.filename;
