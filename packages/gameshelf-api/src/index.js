@@ -44,6 +44,20 @@ app.get("/user", (req, res) =>
     .send(fs.readFileSync(path.resolve(__dirname, "../assets/data/user.json")))
 );
 
+app.get("/comments/:id", (req, res) =>
+  res
+    .contentType("json")
+    .send(
+      fs.readFileSync(
+        path.resolve(
+          __dirname,
+          "../assets/data/comments/",
+          `${req.params.id}.json`
+        )
+      )
+    )
+);
+
 app.get("/images/:filename", async (req, res) => {
   const filename = req.params.filename;
   const filePath = path.resolve(__dirname, "../assets/images", filename);

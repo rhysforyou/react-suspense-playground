@@ -1,8 +1,9 @@
 {
   "id": 0,
   "title": "Super Mario Odyssey",
-  "developer": "Nintendo",
+  "developer": "Nintendo EPD",
   "platform": "switch",
+  "description": "Super Mario Odyssey is a 3D platformer developed by Nintendo EPD and published exclusively for Nintendo Switch worldwide on October 27th, 2017. After losing both Princess Peach and his trademark red cap during an attack by the evil Bowser, Mario teams up with a top hat-shaped creature named Cappy to pursue the wedding-planning villain across the globe and far beyond the boundaries of the Mushroom Kingdom.",
   "boxArt": [
     {
       "src": "http://localhost:3000/images/super-mario-odyssey.jpg"
@@ -23,14 +24,5 @@
       "src": "http://localhost:3000/images/super-mario-odyssey.jpg?size=32"
     }
   ],
-  "comments": [
-    {
-      "author": "John Videogames",
-      "text": "Wow what a great game!"
-    },
-    {
-      "author": "Henry Hatsworth",
-      "text": "I love to throw the cap man at things! Ten caps out of ten for me."
-    }
-  ]
-},
+  "comments": [0, 1, 2]
+}

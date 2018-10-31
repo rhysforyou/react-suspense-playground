@@ -2,34 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "@reach/router";
 import { fetchGames } from "../lib/api";
+import Img from "./Img";
 import Spinner from "./Spinner";
-
-class Img extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true
-    };
-  }
-
-  componentWillMount() {
-    const image = new Image();
-    image.src = this.props.src;
-    image.onload = () => {
-      this.setState({ loading: false });
-    };
-  }
-
-  render() {
-    const { fallback, ...props } = this.props;
-    if (this.state.loading) {
-      return fallback;
-    } else {
-      return <img {...props} />;
-    }
-  }
-}
 
 const Container = styled.div`
   max-width: 48rem;
@@ -57,7 +31,6 @@ const Row = styled(Link)`
 
   &:focus {
     outline: none;
-    background: #e8f7f7;
     border: 2px solid darkturquoise;
     padding: calc(1rem - 2px);
   }
@@ -106,8 +79,10 @@ const Title = styled.h2`
 `;
 
 const Developer = styled.span`
+  color: #666;
   margin-bottom: 1rem;
 `;
+
 const Platform = styled.span`
   background: paleturquoise;
   color: #006c6d;

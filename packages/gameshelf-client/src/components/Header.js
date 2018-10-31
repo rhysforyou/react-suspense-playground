@@ -31,8 +31,7 @@ const NavLink = styled(Link)`
 
   &:focus {
     outline: none;
-    background: rgba(0, 0, 0, 0.05);
-    border: 2px solid white;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     padding: calc(0.5rem - 2px) calc(1rem - 2px);
   }
 
